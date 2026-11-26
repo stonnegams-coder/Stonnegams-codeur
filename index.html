@@ -1,241 +1,564 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StonneGams | Développeur Web Full Stack à Kinshasa</title>
-
-    <meta name="description" content="StonneGams conçoit des sites vitrines, boutiques e-commerce et applications web modernes, rapides et adaptés au mobile à Kinshasa, en RDC.">
-    <meta name="keywords" content="StonneGams, développeur web Kinshasa, développeur full stack RDC, création site web Kinshasa, site vitrine, boutique en ligne, développement web, application web, création site internet RDC">
-    <meta name="author" content="StonneGams">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#26266b">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Stonnegams — Développement web à Kinshasa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="S (1).png" type="image/x-icon">
-</head>
-<body>
-    
-    <!-- Header -->
-     <header>
-
-        <!-- Image : (prend toute la zone header) -->
-         <img src="https://images.pexels.com/photos/12960426/pexels-photo-12960426.jpeg" alt="Une femme qui explore le monde digital" class="banner-img">
-
-         <!-- Banner -->
-        <div class="banner" aria-label="Bannière de la page d'accueil">
-            <!-- Barre de navigation (transparente) -->
-            <div class="navbar" aria-label="Navigation de la page">
-                <nav>
-                    <div class="logo-site">
-                        <a href="index.html" aria-label="Logo de stonnegams">
-                            Stonne<span>Gams</span>
-                        </a>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
-                        <li><a href="contact.html" aria-label="Contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- Barre de navigation (transparente) -->
-
-            <!-- Contenu du banner -->
-            <div class="contenu-banner">
-                <div class="taxt-contenu">
-                    <h1>Votre site web, pensé pour vos clients</h1>    
-                    <p>Je conçois des sites vitrines, des boutiques en ligne et des applications web rapides,
-                      modernes et adaptées au mobile, pour aider votre activité à se faire connaître et à grandir.
-                    </p>
-
-                    <!-- Bouton pour montre mes réalisations (Defil l'écran vers la section de realisation) -->
-                    <button type="button" id="veiw-btn" aria-label="Voir les réalisations">Voir mes réalisations</button>
-                </div>
-
-                <div class="contact-infos-form">
-                    <h2>Parlons de votre projet</h2>
-                    <p>+243 844 583 063</p>
-                    <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
-                    <p>Basé à Kinshasa/Lemba Q/Salongo</p>
-                    <!-- Bouton pour démarrer un projet (anène à page contact sur le formulaire) -->
-                    <button type="button" id="start-btn" aria-label="Démarrér Un projet">Démarrér Un projet</button>
-                </div>
-            </div>
-            <!-- Contenu du banner -->
+  </head>
+  <body>
+    <div class="progress" id="progress">
+    </div>
+    <div class="bg-orbs" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <header>
+      <div class="w">
+        <a class="logo" href="#accueil"><i>S</i>Stonnegams</a>
+        <nav id="menu">
+          <a href="#accueil">Accueil</a>
+          <a href="#apropos">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#realisations">Réalisations</a>
+          <a href="#tarifs">Tarification</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn o" href="#contact">Demander un devis</a>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </div>
+    </header>
+    <main>
+      <!-- ===== Section : accueil ===== -->
+      <section id="accueil" class="w hero">
+        <div>
+          <span class="tag">Développement web &amp; solutions numériques</span>
+          <h1>Votre présence en ligne, <span>conçue pour valoriser votre activité.</span></h1>
+          <p class="typed-line">Des sites vitrines pour <strong id="typed">votre activité</strong><span class="caret" aria-hidden="true"></span></p>
+          <p>Je conçois des sites web modernes, professionnels et adaptés aux besoins des entreprises, des établissements scolaires et des organisations. De la conception à la mise en ligne, chaque projet est réalisé avec soin : design, expérience utilisateur et qualité technique.</p>
+          <div class="bt">
+            <a class="btn" href="#realisations">Découvrir mes réalisations</a>
+            <a class="btn o" href="#contact">Discuter de votre projet</a>
+          </div>
         </div>
-        <!-- Banner -->
-     </header>
-     <!-- Header -->
-
-     <main>
-        <!-- Section de présentation -->
-         <section class="presentation">
-            <h2>Un développeur web sur qui compter</h2>
-            <p>Un accompagnement simple et transparent, de l’idée à la mise en ligne de votre site.</p>
-
-            <div class="blocs-content">
-                <figure>
-                    <img src="data:image/png;base64,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" alt="Fiche de prix" class="figure-img">
-                    <figcaption>Aucun frais caché</figcaption>
-                    <p>Un devis clair dès le départ : ce qui est prévu est ce que vous payez, sans mauvaise surprise en cours de route.</p>
-                </figure>
-                <figure>
-                    <img src="data:image/png;base64,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" alt="Fiche de prix" class="figure-img">
-                    <figcaption>Devis gratuit</figcaption>
-                    <p>Décrivez-moi votre projet : je vous réponds avec des conseils et une estimation, sans engagement.</p>
-                </figure>
-                <figure>
-                    <img src="data:image/png;base64,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" alt="Fiche de prix" class="figure-img">
-                    <figcaption>Audit gratuit de votre site</figcaption>
-                    <p>Vous avez déjà un site ? Je l’analyse (vitesse, affichage mobile, référencement) et je vous dis ce qu’il faut améliorer.</p>
-                </figure>
-            </div>
-
-            <!-- Bouton pour me contacter (anène à page contact sur le formulaire) -->
-                    <button type="button" id="contact-btn" aria-label="Contacter">Me contacter</button>
-         </section>
-         <!-- Section de présentation -->
-
-         <!-- Section de réalisations -->
-          <section class="realisation">
-            <h2>Réalisations récentes</h2>
-            <p>Quelques exemples de sites et d’applications conçus pour des commerces, des professionnels et des associations.</p>
-
-            <div class="article-content">
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/restaurant.jpg" alt="Site de restaurant" class="article-slide">
-                    </div>
-                    <p>Restauration</p>
-                    <h3>Burgry, restaurant de burgers</h3>
-                    <p>HTML, CSS, JavaScript, EmailJS</p>
-                    <p><strong>Ligne 1:</strong>Menu, panier et commande envoyée par e-mail</p>
-                    <p><strong>Ligne 2:</strong>Site vitrine : 4 pages</p>
-                </article>
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/boutique-slide.jpg" alt="Site de commerce" class="article-slide">
-                    </div>
-                    <p>Commerce de mode</p>
-                    <h3>Boutique en ligne</h3>
-                    <p>WordPress, WooCommerce</p>
-                    <p><strong>Ligne 1:</strong>Catalogue, panier et paiement mobile money</p>
-                    <p><strong>Ligne 2:</strong>E-commerce · 30 produits</p>
-                </article>
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/clinique-slide.jpg" alt="Site d'un cabinet médical" class="article-slide">
-                    </div>
-                    <p>Santé</p>
-                    <h3>Cabinet médical</h3>
-                    <p>HTML, CSS, JavaScript, PHP</p>
-                    <p><strong>Ligne 1:</strong>Présentation des services et demande de rendez-vous</p>
-                    <p><strong>Ligne 2:</strong>Site vitrine : 3 pages</p>
-                </article>
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/studio-slide.jpg" alt="Site de studio photo" class="article-slide">
-                    </div>
-                    <p>Photographie</p>
-                    <h3>Portfolio de photographe</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <p><strong>Ligne 1:</strong>Galerie photos rapide avec affichage plein écran</p>
-                    <p><strong>Ligne 2:</strong>Portfolio : 1 page</p>
-                </article>
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/contact-slide.jpg" alt="Site de restaurant" class="article-slide">
-                    </div>
-                    <p>Association</p>
-                    <h3>Agence de commerce</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <p><strong>Ligne 1:</strong>Suivi des produits, entrées et sorties</p>
-                    <p><strong>Ligne 2:</strong>Application web sur mesure</p>
-                </article>
-
-                <article>
-                    <div class="article-image">
-                        <img src="images/ong-slide.jpg" alt="Site de l'ONG" class="article-slide">
-                    </div>
-                    <p>Association</p>
-                    <h3>Site d’une ONG</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <p><strong>Ligne 1:</strong>Présentation des actions, actualités et appel aux dons</p>
-                    <p><strong>Ligne 2:</strong>Site institutionnel · 5 pages</p>
-                </article>
-
-                <!-- Bouton pour pour ouvrir une conversation whatsapp -->
-                <a href="https://wa.me" id="whatsapp-btn" aria-label="Discuter sur whatsapp">Whatsapp</a>
-            </div>
-          </section>
-          <!-- Section de réalisations -->
-
-          <!-- Section d'appel à l'action -->
-           <section class="call-action">
-            <!-- Image : (prend toute la section) -->
-             <img src="images/slide-2.jpg" alt="Un monde digital" class="call-img">
-
-             <div class="call-contenu">
-                <h2>Prêt à lancer votre projet ?</h2>
-                <p>Racontez-moi votre idée en quelques lignes. Je vous réponds sous 24 heures avec une première proposition, sans engagement.</p>
-                <!-- Bouton pour me contacter (ouvre la page de contact) -->
-                 <a href="contact.html" id="open-contact-btn" aria-label="Ouvrir la page de contact">Me contacter</a>
-             </div>
-           </section>
-           <!-- Section d'appel à l'action -->
-     </main>
-    
-     <!-- Footer -->
-      <footer>
-
-        <div class="foot-contenu-content">
-            <div class="foot-logo">
-                <div class="logo-site">
-                    <a href="index.html" aria-label="Logo de stonnegams">
-                        Stonne<span>Gams</span>
-                    </a>
-                 </div>
-            </div>
-
-            <div class="foot-links">
-               <ul class="nav-links">
-                    <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
-                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="contact-infos">
-                <a href="mailto:stonnegams@gmail.com">stonnegams@gmail.com</a>
-                <a href="tel:+243844583063">+243 844 583 063</a>
-            </div>
-
-            <div class="foot-socials">
-                <ul class="foot-socials-links">
-                    <li><a href="https://www.linkedin.com/in/stonne-gams-5343bb3b3" target="_blank" aria-label="Me contacter sur Linkedin">Linkedin</a></li>
-                    <li><a href="#" target="_blank" aria-label="Me contacter sur Instagram">Instagram</a></li>
-                </ul>
-            </div>
+        <div class="vis" role="img" aria-label="Illustration d’un éditeur de code">
+          <div class="win">&lt;<b>section</b> class="<b>vitrine</b>"&gt;<br>&nbsp;&nbsp;&lt;<b>h1</b>&gt;Votre activité&lt;/<b>h1</b>&gt;<br>&nbsp;&nbsp;&lt;<b>nav</b>&gt;Responsive&lt;/<b>nav</b>&gt;<br>&lt;/<b>section</b>&gt;</div>
+          <div class="sc">Concevoir,<br>livrer, valoriser</div>
+          <span class="chip c1" data-depth="18">HTML5</span>
+          <span class="chip c2" data-depth="28">CSS3</span>
+          <span class="chip c3" data-depth="22">JavaScript</span>
+          <span class="chip c4" data-depth="34">Responsive</span>
         </div>
-       <p> Copyright : © 2026 Stonnegams. Tous droits réservés.</p>
-      </footer>
-      <!-- Footer -->
-       <script src="script.js"></script>
-</body>
+      </section>
+      <div class="w">
+        <div class="g stats">
+          <div class="card">
+            <strong data-count="7">0</strong>
+            <span>étapes de collaboration</span>
+          </div>
+          <div class="card">
+            <strong>2–4 sem.</strong>
+            <span>délai indicatif, site de 6 à 10 pages</span>
+          </div>
+          <div class="card">
+            <strong data-count="3">0</strong>
+            <span>échéances de paiement</span>
+          </div>
+          <div class="card">
+            <strong data-count="100" data-suffix=" %">0</strong>
+            <span>design responsive</span>
+          </div>
+        </div>
+      </div>
+      <section class="w">
+        <span class="tag">Pourquoi Stonnegams ?</span>
+        <h2>Pourquoi travailler avec moi</h2>
+        <div class="g g3 mt" id="why">
+          <div class="card">
+            <div class="ic">
+              🎨
+            </div>
+            <h3>Conception personnalisée</h3>
+            <p>Chaque site est pensé selon l’identité et les objectifs de votre activité.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              📱
+            </div>
+            <h3>Design responsive</h3>
+            <p>Une expérience adaptée aux ordinateurs, tablettes et smartphones.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              🧭
+            </div>
+            <h3>Navigation intuitive</h3>
+            <p>Une organisation claire des informations pour faciliter la visite.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              🤝
+            </div>
+            <h3>Collaboration directe</h3>
+            <p>Un interlocuteur unique pour échanger et suivre votre projet.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              🛟
+            </div>
+            <h3>Accompagnement</h3>
+            <p>Une assistance pour la mise en ligne et les besoins techniques convenus.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section : apropos ===== -->
+      <section id="apropos" class="w split">
+        <div class="vis vis-about">
+          <div class="win win-about">HTML<br>CSS<br>JavaScript<br><b>// Kinshasa, RDC</b></div>
+        </div>
+        <div>
+          <span class="tag">À propos</span>
+          <h2>Une approche orientée vers la conception web</h2>
+          <p>Je suis développeur web indépendant et je travaille sous le nom de Stonnegams. Je réalise des sites vitrines pour les entreprises, les établissements scolaires et les professionnels qui veulent renforcer leur présence sur Internet.</p>
+          <p>Mon approche repose sur trois principes : comprendre les besoins du client, concevoir une solution adaptée et livrer un produit fonctionnel et soigné. Je développe principalement avec HTML, CSS et JavaScript.</p>
+          <p class="vision"><strong>Ma vision :</strong> faire du web un véritable outil de communication, de présentation et de développement pour les entreprises et les organisations.</p>
+          <p>📍 Kinshasa, République démocratique du Congo</p>
+        </div>
+      </section>
+      <!-- ===== Section : profil ===== -->
+      <section id="profil" class="w split">
+        <div>
+          <span class="tag">Le développeur</span>
+          <h2>Stonne Gams</h2>
+          <p>Développeur web indépendant, spécialisé dans la conception de sites vitrines et de solutions numériques pour les entreprises, les établissements scolaires et les organisations.</p>
+          <a class="btn" href="#contact">Discuter de votre projet</a>
+        </div>
+        <div class="vis vis-photo">
+          <img src="images/IMG_20261126_210453_622.jpg.jpeg" alt="Portrait de Stonne Gams" width="400" height="500" loading="lazy">
+          <span class="badge-float">📍 Kinshasa, RDC</span>
+        </div>
+      </section>
+      <!-- ===== Section : services ===== -->
+      <section id="services" class="w">
+        <span class="tag">Services</span>
+        <h2>Ce que je propose</h2>
+        <div class="g g3 mt" id="svc">
+          <div class="card">
+            <div class="ic">
+              🖥️
+            </div>
+            <h3>Création de sites vitrines</h3>
+            <p>Sites professionnels pour établissements scolaires, hôtels, restaurants, entreprises, associations et organisations.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              🧩
+            </div>
+            <h3>Personnalisation de sites existants</h3>
+            <p>Identité visuelle, logo et couleurs, textes et images, sections, navigation et fonctionnalités adaptés à votre activité.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              ✨
+            </div>
+            <h3>Refonte de sites web</h3>
+            <p>Modernisation d’un site existant : présentation, organisation et expérience utilisateur.</p>
+          </div>
+          <div class="card">
+            <div class="ic">
+              📐
+            </div>
+            <h3>Adaptation responsive</h3>
+            <p>Affichage optimisé sur ordinateurs, tablettes et smartphones.</p>
+          </div>
+        </div>
+        <div class="card mt">
+          <h3>Maintenance et assistance technique</h3>
+          <p>Corrections techniques, modifications de textes et d’images, ajout de sections, vérification des fonctionnalités, assistance à la gestion du site. Les fonctionnalités avancées (serveur, base de données, espace d’administration) font l’objet d’une étude technique et d’un devis spécifique.</p>
+        </div>
+      </section>
+      <!-- ===== Section : realisations ===== -->
+      <section id="realisations" class="w">
+        <span class="tag">Réalisations</span>
+        <h2>Des projets conçus pour répondre à des besoins concrets</h2>
+        <p>Chaque projet démontre mes compétences en structuration HTML, conception d’interfaces, intégration CSS et interactions JavaScript.</p>
+        <div class="tabs" role="group" aria-label="Filtrer les réalisations">
+          <button type="button" data-filter="Tous" class="on" aria-pressed="true">Tous</button>
+          <button type="button" data-filter="Écoles" class="" aria-pressed="false">Écoles</button>
+          <button type="button" data-filter="Hôtels" class="" aria-pressed="false">Hôtels</button>
+          <button type="button" data-filter="Restaurants" class="" aria-pressed="false">Restaurants</button>
+        </div>
+        <div class="g g3" id="proj">
+          <article class="card proj" data-cat="Écoles">
+            <figure class="proj-media" tabindex="0" role="button" aria-label="Agrandir l’aperçu de Académie Horizon">
+              <img src="images/Ex-1.png" alt="Aperçu du site de démonstration Académie Horizon" width="600" height="400" loading="lazy">
+              <span class="badge">Écoles</span>
+            </figure>
+            <div class="bd">
+              <h3>Académie Horizon</h3>
+              <p>Présenter programmes, admissions et actualités.</p>
+              <ul>
+                <li>Type : site d’établissement scolaire</li>
+                <li>Technologies : HTML, CSS, JavaScript</li>
+                <li>8 pages · projet de démonstration</li>
+              </ul>
+              <a class="btn o sm" href="#contact">Voir la démonstration</a>
+            </div>
+          </article>
+          <article class="card proj" data-cat="Hôtels">
+            <figure class="proj-media" tabindex="0" role="button" aria-label="Agrandir l’aperçu de Résidence Lumière">
+              <img src="images/Ex-2.png" alt="Aperçu du site de démonstration Résidence Lumière" width="600" height="400" loading="lazy">
+              <span class="badge">Hôtels</span>
+            </figure>
+            <div class="bd">
+              <h3>Résidence Visita Suite</h3>
+              <p>Chambres, galerie, services et contact.</p>
+              <ul>
+                <li>Type : site d’hôtel</li>
+                <li>Technologies : HTML, CSS, JavaScript</li>
+                <li>7 pages · projet de démonstration</li>
+              </ul>
+              <a class="btn o sm" href="#contact">Voir la démonstration</a>
+            </div>
+          </article>
+          <article class="card proj" data-cat="Restaurants">
+            <figure class="proj-media" tabindex="0" role="button" aria-label="Agrandir l’aperçu de Maison Savane">
+              <img src="images/Ex-3.png" alt="Aperçu du site de démonstration Maison Savane" width="600" height="400" loading="lazy">
+              <span class="badge">Cosmétique</span>
+            </figure>
+            <div class="bd">
+              <h3>Maison Savane</h3>
+              <p>Menu, galerie, horaires et contact pour acheter des produits.</p>
+              <ul>
+                <li>Type : site de restaurant</li>
+                <li>Technologies : HTML, CSS, JavaScript</li>
+                <li>5 pages · projet de démonstration</li>
+              </ul>
+              <a class="btn o sm" href="#contact">Voir la démonstration</a>
+            </div>
+          </article>
+        </div>
+        <p class="note">Certaines réalisations sont des projets de démonstration conçus pour illustrer mes possibilités. Elles peuvent servir de base à un projet personnalisé, adapté à votre identité et à vos besoins.</p>
+      </section>
+      <!-- ===== Section : processus ===== -->
+      <section id="processus" class="w">
+        <span class="tag">Processus de travail</span>
+        <h2>Un processus organisé, de la première discussion à la livraison</h2>
+        <div class="steps mt" id="steps">
+          <div class="step">
+            <div class="card">
+              <h3>Prise de contact</h3>
+              <p>Vous présentez votre activité et votre besoin ; nous échangeons sur les objectifs, les informations à communiquer et les fonctionnalités. Un rendez-vous peut avoir lieu en présentiel ou à distance.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Analyse des besoins</h3>
+              <p>Je détermine le type de site, le nombre de pages, les fonctionnalités, l’identité visuelle, les contenus et les contraintes techniques pour définir précisément le périmètre.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Proposition commerciale</h3>
+              <p>Description du projet, prestations, fonctionnalités, prix, calendrier, modalités de paiement et conditions de livraison. Le projet démarre après acceptation du devis et règlement de l’acompte.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Conception et développement</h3>
+              <p>Structuration des pages, intégration des contenus, conception des interfaces, interactions et adaptation aux écrans.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Présentation et validation</h3>
+              <p>Une version de démonstration vous est présentée. Les corrections prévues au devis sont effectuées ; toute demande qui modifie le périmètre peut être facturée en complément.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Livraison et mise en ligne</h3>
+              <p>Après validation et règlement du solde, le site est préparé pour la mise en ligne et les éléments prévus au contrat vous sont remis.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="card">
+              <h3>Accompagnement après livraison</h3>
+              <p>Vous pouvez bénéficier d’une assistance ou souscrire un service de maintenance selon les modalités convenues.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section : tarifs ===== -->
+      <section id="tarifs" class="w">
+        <span class="tag">Tarification</span>
+        <h2>Des prestations adaptées à votre projet</h2>
+        <p>Le tarif est établi selon le travail nécessaire et les fonctionnalités demandées. Budgets indicatifs pour les sites vitrines :</p>
+        <div class="g g3 mt">
+          <div class="card">
+            <h3>Offre Essentielle</h3>
+            <div class="price">
+              150 à 250 USD
+            </div>
+            <p>Pour les petites structures qui présentent leurs activités en ligne.</p>
+            <ul class="l">
+              <li>3 à 5 pages</li>
+              <li>Design responsive</li>
+              <li>Présentation de l’activité</li>
+              <li>Navigation entre les pages</li>
+              <li>Coordonnées et liens de contact</li>
+              <li>Intégration des contenus fournis</li>
+            </ul>
+          </div>
+          <div class="card f">
+            <h3>Offre Professionnelle</h3>
+            <div class="price">
+              300 à 450 USD
+            </div>
+            <p>Pour les établissements et entreprises qui ont besoin d’une présentation complète.</p>
+            <ul class="l">
+              <li>6 à 10 pages</li>
+              <li>Design personnalisé</li>
+              <li>Présentation détaillée des activités</li>
+              <li>Galerie d’images</li>
+              <li>Sections services ou programmes</li>
+              <li>Interactions JavaScript prévues</li>
+              <li>Optimisation technique et référencement de base</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Projet personnalisé</h3>
+            <div class="price">
+              Sur devis
+            </div>
+            <p>Pour les besoins spécifiques ou les fonctionnalités supplémentaires. Le prix dépend :</p>
+            <ul class="l">
+              <li>du niveau de complexité</li>
+              <li>du nombre de fonctionnalités</li>
+              <li>des intégrations nécessaires</li>
+              <li>des besoins de gestion dynamique</li>
+              <li>du temps de développement</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note">Tarifs indicatifs : le prix définitif est confirmé dans le devis. Nom de domaine, hébergement, abonnements externes, licences payantes, production de contenus et fonctionnalités supplémentaires sont facturés séparément si nécessaires.</p>
+      </section>
+      <!-- ===== Section : paiement ===== -->
+      <section id="paiement" class="w">
+        <span class="tag">Modalités de paiement</span>
+        <h2>Des conditions de paiement définies à l’avance</h2>
+        <div class="pay">
+          <div class="card">
+            <strong>40 %</strong>
+            <h3>À la validation du projet</h3>
+            <p>Acompte qui confirme la commande et lance le travail.</p>
+          </div>
+          <div class="card">
+            <strong>40 %</strong>
+            <h3>À la version de démonstration</h3>
+            <p>Paiement intermédiaire après présentation de la version prévue.</p>
+          </div>
+          <div class="card">
+            <strong>20 %</strong>
+            <h3>À la livraison finale</h3>
+            <p>Solde réglé après validation et avant la remise finale.</p>
+          </div>
+        </div>
+        <p>Moyens acceptés : <strong class="hl">M-Pesa, Orange Money, Airtel Money, virement bancaire</strong> ou autre moyen convenu avant le démarrage. Une preuve de paiement est remise pour chaque règlement. Les modalités peuvent être adaptées avec l’accord des deux parties.</p>
+      </section>
+      <section class="w">
+        <div class="g g2">
+          <div class="card">
+            <span class="tag">Délais</span>
+            <h3>Un calendrier adapté à chaque projet</h3>
+            <p>Pour un site vitrine de 6 à 10 pages, le délai indicatif est de 2 à 4 semaines ; le calendrier définitif figure dans le devis. Il commence après l’acceptation du devis, le règlement de l’acompte et la réception des contenus nécessaires. Un retard de contenus ou une modification importante peut entraîner une révision du calendrier.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Hébergement et domaine</span>
+            <h3>Votre site, votre identité numérique</h3>
+            <p>Le nom de domaine (par exemple www.votre-etablissement.cd) est idéalement enregistré au nom du client. L’hébergement peut être souscrit par le client ou organisé avec mon assistance. Les renouvellements sont à la charge du client, sauf accord contraire dans le devis, et ne sont pas inclus dans le prix de conception.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section : maintenance ===== -->
+      <section id="maintenance" class="w">
+        <span class="tag">Maintenance et suivi</span>
+        <h2>Un site qui continue de répondre à vos besoins</h2>
+        <div class="g g3 mt">
+          <div class="card">
+            <h3>Maintenance légère</h3>
+            <div class="price">
+              15 à 25 USD/mois
+            </div>
+            <ul class="l">
+              <li>Petites corrections</li>
+              <li>Modifications simples de contenus</li>
+              <li>Vérifications périodiques</li>
+              <li>Assistance technique limitée</li>
+            </ul>
+          </div>
+          <div class="card f">
+            <h3>Maintenance standard</h3>
+            <div class="price">
+              30 à 50 USD/mois
+            </div>
+            <ul class="l">
+              <li>Modifications régulières des contenus</li>
+              <li>Ajout d’actualités selon le volume convenu</li>
+              <li>Vérification des formulaires et des liens</li>
+              <li>Contrôle technique périodique</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Maintenance avancée</h3>
+            <div class="price">
+              Dès 60 USD/mois
+            </div>
+            <p>Pour un suivi technique plus important, selon les fonctionnalités, les sauvegardes et le volume d’interventions.</p>
+          </div>
+        </div>
+        <p class="note">La maintenance fait l’objet d’un accord distinct précisant interventions, fréquence et délais. Hébergement, domaine et abonnements externes restent distincts.</p>
+      </section>
+      <section class="w">
+        <div class="g g2">
+          <div class="card">
+            <span class="tag">Propriété et livraison</span>
+            <h3>Transparence sur les éléments livrés</h3>
+            <p>Après règlement intégral, les éléments et droits convenus au contrat sont remis au client.</p>
+            <ul class="l">
+              <li>Fichiers HTML, CSS et JavaScript</li>
+              <li>Images et ressources du client ou autorisées</li>
+              <li>Éléments de configuration et accès convenus</li>
+            </ul>
+            <p class="mt-sm">Le domaine et l’hébergement restent accessibles à leur propriétaire. Les ressources sous licence tierce suivent leurs propres conditions ; les droits sur le code source sont précisés au contrat.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Conditions de collaboration</span>
+            <h3>Des engagements clairs</h3>
+            <p><strong class="hl">Stonnegams :</strong> respecter le périmètre validé, informer de l’avancement, présenter une démonstration, effectuer les corrections incluses, tenir le calendrier autant que possible, livrer après règlement intégral.</p>
+            <p><strong class="hl">Le client :</strong> fournir contenus et informations dont il détient les droits, valider les étapes dans des délais raisonnables, respecter les échéances, signaler clairement les corrections, régler les frais externes prévus.</p>
+            <p>Les changements importants, nouvelles pages ou fonctionnalités font l’objet d’une nouvelle estimation. Annulation et remboursements sont définis au contrat.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Section : faq ===== -->
+      <section id="faq" class="w narrow">
+        <span class="tag">FAQ</span>
+        <h2>Questions fréquentes</h2>
+        <div id="faqs" class="mt">
+          <details>
+            <summary>Dois-je avoir des connaissances techniques ?</summary>
+            <p>Non. Je vous accompagne dans la définition de vos besoins et je vous explique chaque étape du projet.</p>
+          </details>
+          <details>
+            <summary>Puis-je demander un site similaire à l’une de vos réalisations ?</summary>
+            <p>Oui. Les sites de démonstration peuvent servir de base ; design, contenus et fonctionnalités sont adaptés à votre établissement.</p>
+          </details>
+          <details>
+            <summary>Puis-je demander un site de plus de dix pages ?</summary>
+            <p>Oui. Le nombre de pages est défini selon vos besoins et intégré au devis.</p>
+          </details>
+          <details>
+            <summary>Le prix comprend-il le nom de domaine et l’hébergement ?</summary>
+            <p>Pas automatiquement. Ces frais sont présentés séparément dans la proposition commerciale.</p>
+          </details>
+          <details>
+            <summary>Est-il possible de payer en plusieurs fois ?</summary>
+            <p>Oui. Pour une prestation classique, un échéancier en trois étapes (40 %, 40 %, 20 %) peut être proposé.</p>
+          </details>
+          <details>
+            <summary>Combien de temps faut-il pour réaliser mon site ?</summary>
+            <p>Un site vitrine de 6 à 10 pages demande généralement deux à quatre semaines, selon la complexité et la disponibilité des contenus.</p>
+          </details>
+          <details>
+            <summary>Pourrai-je modifier moi-même mon site ?</summary>
+            <p>Un site vitrine statique demande généralement une intervention sur les fichiers. Une interface d’administration doit être développée spécifiquement et fait l’objet d’un devis.</p>
+          </details>
+          <details>
+            <summary>Qui s’occupe des mises à jour après la livraison ?</summary>
+            <p>Vous pouvez passer par un intervenant technique de votre choix ou souscrire une maintenance auprès de Stonnegams.</p>
+          </details>
+          <details>
+            <summary>Que faire en cas de problème après la livraison ?</summary>
+            <p>Contactez Stonnegams. Les interventions couvertes par une garantie de correction ou un contrat de maintenance suivent leurs conditions respectives.</p>
+          </details>
+          <details>
+            <summary>Puis-je récupérer les fichiers de mon site ?</summary>
+            <p>Oui. Les fichiers et éléments prévus au contrat sont remis après règlement intégral.</p>
+          </details>
+          <details>
+            <summary>Travaillez-vous uniquement avec les écoles ?</summary>
+            <p>Non. J’accompagne aussi les entreprises, hôtels, restaurants et autres organisations.</p>
+          </details>
+          <details>
+            <summary>Comment commencer un projet ?</summary>
+            <p>Prenez contact, présentez votre besoin et convenons d’un premier échange. Une proposition commerciale sera ensuite préparée.</p>
+          </details>
+        </div>
+      </section>
+      <!-- ===== Section : contact ===== -->
+      <section id="contact" class="w split top">
+        <div class="ct">
+          <span class="tag">Contact</span>
+          <h2>Votre prochain projet web commence ici.</h2>
+          <p>Vous souhaitez créer un site web, moderniser votre présence numérique ou présenter votre activité de manière plus professionnelle ? Je suis disponible pour étudier votre besoin.</p>
+          <p>👤 Stonnegams, développement web indépendant</p>
+          <p>📍 Kinshasa, RDC</p>
+          <p>✉️ <a href="mailto:stonnegams@gmail.com" class="link">stonnegams@gmail.com</a></p>
+          <p>💬 WhatsApp : [Votre numéro professionnel]</p>
+        </div>
+        <form id="f" novalidate>
+          <p class="form-intro">Présentez votre projet en quelques lignes. Je vous contacterai pour discuter de vos besoins.</p>
+          <input id="n" placeholder="Votre nom" aria-label="Votre nom" required>
+          <input id="e" type="email" placeholder="Votre e-mail" aria-label="Votre e-mail" required>
+          <textarea id="m" placeholder="Votre projet" aria-label="Votre projet" required></textarea>
+          <button class="btn form-btn" type="submit">Demander un devis</button>
+        </form>
+      </section>
+    </main>
+    <!-- ===== Pied de page ===== -->
+    <footer>
+      <div class="w">
+        <div class="fg">
+          <div>
+            <a class="logo foot-logo" href="#accueil"><i>S</i>Stonnegams</a>
+            <p>Développement web indépendant à Kinshasa. Sites vitrines modernes, responsives et personnalisés pour les entreprises, les établissements scolaires et les organisations.</p>
+          </div>
+          <div>
+            <h3>Navigation</h3>
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#services">Services</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#tarifs">Tarification</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div>
+            <h3>Informations</h3>
+            <a href="#processus">Processus de travail</a>
+            <a href="#paiement">Modalités de paiement</a>
+            <a href="#maintenance">Hébergement et maintenance</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </div>
+        <div class="copy">
+          <span>© 2026 Stonnegams. Tous droits réservés.</span>
+          <span>Un projet mérite une présence numérique à sa hauteur.</span>
+        </div>
+      </div>
+    </footer>
+    <a class="fab-quote" id="quote" href="#contact">💬 Demander un devis</a>
+    <a class="fab" id="toTop" href="#accueil" aria-label="Retour en haut">↑</a>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu agrandi" hidden>
+      <button class="lb-close" type="button" aria-label="Fermer">✕</button>
+      <img alt="">
+      <p></p>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite">
+    </div>
+    <script src="js/script.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
